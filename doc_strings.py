@@ -6,12 +6,12 @@
 #Docstring line should begin with a capital letter and end with a period.
 #First line is a short description (summary line) and can be the same line as the opening quotes, or on the next line.
 #If single line, put opening and closing quotes on same line of docstring.
-#If multi line, second line should be a blank, visually seperating the summary from the rest of the description.
+#If multi line, second line should be a blank, visually separating the summary from the rest of the description.
 #The following lines should describe calling conventions, side effects, returns, etc.
 #The entire docstring is indented the same as the quotes at its first line.
 #Relative indentation (to the first line) of later lines are allowed.
 
-#Example of docstring on class, note the line break after the summary:
+#Example of docstring on class and methods, note the line break after summaries:
 class Greeting:
     '''
     Class for different types of greetings.
@@ -49,8 +49,6 @@ class Greeting:
         """Prints Good morning to inputted name."""
 
         print(f"Good morning {self.name}!")
-
-
 
 aObj = Greeting("Tony")
 
