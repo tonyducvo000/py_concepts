@@ -10,7 +10,7 @@
 #The following lines should describe calling conventions, side effects, returns, etc.
 #The entire docstring is indented the same as the quotes at its first line.
 #Relative indentation (to the first line) of later lines are allowed.
-#In the termincal, docstrings can be accessed by >>>help(myModule.myClass), >>>help(myModule.myClass.myMethod) and >>>help(myModule.myFunction).
+#In the terminal, docstrings can be accessed by >>>help(myModule.myClass), >>>help(myModule.myClass.myMethod) and >>>help(myModule.myFunction).
 
 #Example of docstring on class and methods, note the line break after summaries:
 class Greeting:
