@@ -1,4 +1,4 @@
-# To remedy the problems presented in abstract_base_class, Python's abc module is used.
+# To remedy the problems presented in abstract_base_class,py, Python's abc module is used.
 
 from abc import ABCMeta, abstractmethod
 
@@ -16,10 +16,10 @@ class Concrete(Base):
         pass
 
 # Problem #1 solution - @abstractmethod prevents Base class from being instantiated.
-# TypeError: Can't instantiate abstract class Base with abstract methods bar, foo
+# TypeError: Can't instantiate abstract class Base with abstract methods bar, foo will be thrown.
 baseObj = Base()
 
 # Problem #2 solution - @abstract method prevents Concrete from being instantiated
 # Concrete class did not implement all of the methods in Base class.
-# TypeError: Can't instantiate abstract class Concrete with abstract methods bar
+# TypeError: Can't instantiate abstract class Concrete with abstract methods bar will be thrown.
 conObj = Concrete()
