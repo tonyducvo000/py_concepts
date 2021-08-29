@@ -1,18 +1,18 @@
-#Docstring provides a way to associate documentation with functions, class, modules, and methods.
+# Docstring provides a way to associate documentation with functions, class, modules, and methods.
 
-#Docstring conventions:
-#Docstrings must be the first statement in the function, class, modules or methods - otherwise it's not considered a docstring.
-#Cannot use a hashtag, as it is used for comments.  Begin and end with ''' or """ for docstrings. Comments can't be accessed with __doc__.
-#Docstring line should begin with a capital letter and end with a period.
-#First line is a short description (summary line) and can be the same line as the opening quotes, or on the next line.
-#If single line, put opening and closing quotes on same line of docstring.
-#If multi line, second line should be a blank, visually separating the summary from the rest of the description.
-#The following lines should describe calling conventions, side effects, returns, etc.
-#The entire docstring is indented the same as the quotes at its first line.
-#Relative indentation (to the first line) of later lines are allowed.
-#In the terminal, docstrings can be accessed by >>>help(myModule.myClass), >>>help(myModule.myClass.myMethod) and >>>help(myModule.myFunction).
+# Docstring conventions:
+# Docstrings must be the first statement in the function, class, modules or methods - otherwise it's not considered a docstring.
+# Cannot use a hashtag, as it is used for comments.  Begin and end with ''' or """ for docstrings. Comments can't be accessed with __doc__.
+# Docstring line should begin with a capital letter and end with a period.
+# First line is a short description (summary line) and can be the same line as the opening quotes, or on the next line.
+# If single line, put opening and closing quotes on same line of docstring.
+# If multi line, second line should be a blank, visually separating the summary from the rest of the description.
+# The following lines should describe calling conventions, side effects, returns, etc.
+# The entire docstring is indented the same as the quotes at its first line.
+# Relative indentation (to the first line) of later lines are allowed.
+# In the terminal, docstrings can be accessed by >>>help(myModule.myClass), >>>help(myModule.myClass.myMethod) and >>>help(myModule.myFunction).
 
-#Example of docstring on class and methods, note the line break after summaries:
+# Example of docstring on class and methods, note the line break after summaries:
 class Greeting:
     '''
     Class for different types of greetings.
@@ -53,5 +53,5 @@ class Greeting:
 
 aObj = Greeting("Tony")
 
-#Print docstrings for printGoodMorining().  Note no paranthesis are used.
+# Print docstrings for printGoodMorining().  Note no paranthesis are used.
 print(aObj.printGoodMorning.__doc__)
