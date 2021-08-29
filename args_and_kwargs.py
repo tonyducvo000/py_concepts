@@ -1,5 +1,5 @@
 # *args and **kwargs are ways to pass a variable number of arguments to functions.
-# *args are non keyward arguments, while **kwargs are keyword arguments.
+# *args are non keyword arguments, while **kwargs are keyword arguments.
 
 # Example:
 def argFunc(*args):
