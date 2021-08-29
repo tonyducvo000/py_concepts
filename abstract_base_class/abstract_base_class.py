@@ -4,11 +4,22 @@
 # Abstract class can be considered as a blueprint for other classes.
 # Abstract classes must contain one or more abstract methods.
 # Abstract methods is a method that is declared but contains no implementation.
-# Abstract classes may not be instantiated, and its abstract methods must be implemented by its subclasses.
+# Abstract classes may not be instantiated, and all of its abstract methods must be implemented by its subclasses.
+# Abstract base classes separate the interface from the implementation.
 
 # When and how to use abstract classes:
 # Abstract base classes provide an interface and make sure that the derived classes are implemented properly.
-# Abstract base classes provide a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods).
+
+# Abstract base classes provide a way to define interfaces when other techniques
+# like hasattr() would be clumsy or subtly wrong (for example with magic methods).
+
+# When there is a large number of classes and keeping track is impossible,
+# abstract base classes can help in this regards.
+
+# When multiple classes have methods that function similarly (e.g., Lion.feed_lion(), Cat.feed_cat(), Dog.feed_dog()).
+# Lion, Cat, and Dog class can be subclassed from an abstract class (e.g., Class Animal).
+# Each subclass then simply implement the abstract feed() method.
+
 # Subclass of abstract classes must implement ALL of the abstract methods.
 
 ##################################################################################################################################################################
