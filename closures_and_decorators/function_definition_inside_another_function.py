@@ -30,6 +30,6 @@ func = print_msg("Python is awesome")
 # Closure is simply a function that remembers the values and variables in its enclosing scope
 # even if the outer function is done executing!
 
-#the line below is valid - it is actually calling the inner print() function
+# The line below is valid - it is actually calling the inner print() function
 func()
 
