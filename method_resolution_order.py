@@ -3,6 +3,9 @@
 # This order is also called Linearization of a class and set of rules are called MRO (Method Resolution Order).
 
 # Program to demonstrate multiple layers of inheritance.
+# The MRO is then printed, showing the order of inheritance in a list,
+# with the most recent inheritance appearing  near the beginning of the list.
+# Note that <class 'object'> is the last element in the list.  This is the superclass that all classes inherit from.
 from abc import ABCMeta, abstractmethod
 
 # Abstract Base Class
@@ -57,6 +60,7 @@ class Equidae(Perissodactyla):
     def shape(self):
         print("*Is horse-like form*")
 
+
 # Genus
 class Equus(Equidae):
     pass
@@ -88,6 +92,7 @@ class Africanus(Equus):
     def temperament(self):
         print("I'm impatient!")
 
+
 # Mule - multiple inheritance
 class Mule(Caballus, Africanus):
     def shape(self):
@@ -103,8 +108,10 @@ class Mule(Caballus, Africanus):
 # class MuleClone(Animalia, Mammalia, Perissodactyla, Equidae, Equus, Caballus, Africanus):
 #     pass
 
-# This won't throw an error, since the listed parent classes are written in order.
-class MuleClone(Africanus, Caballus, Equus, Equidae,
+
+# This won't throw an error, since the listed parent classes are written in order, from most recent to least recent
+# inheritance.
+class MuleClone(Caballus, Africanus, Equus, Equidae,
                 Perissodactyla, Mammalia, Animalia):
     def talk(self):
         print("I'm the mule clone!")
@@ -127,4 +134,6 @@ MCloneObj.giveBirth()
 MCloneObj.feedChild()
 
 # Calling the MRO.
+# Both MRO are similar.
 print(Mule.mro())
+print(MuleClone.mro())

@@ -1,0 +1,2 @@
+# LEGB stands for Local, Enclosing, Global, Built-in and are the possible scopes of a variable in Python.
+# They are in the order of precedence, meaning Python searches the value of a name in each of the namespace in turn.
