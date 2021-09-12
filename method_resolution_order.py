@@ -2,9 +2,11 @@
 # First, the method or attribute is searched within a class and then it follows the order we specified while inheriting.
 # This order is also called Linearization of a class and set of rules are called MRO (Method Resolution Order).
 
+# Program to demonstrate multiple layers of inheritance.
 from abc import ABCMeta, abstractmethod
 
 # Abstract Base Class
+# Animal kingdom
 class Animalia(metaclass=ABCMeta):
     def __init__(self):
         pass
@@ -59,7 +61,7 @@ class Equidae(Perissodactyla):
 class Equus(Equidae):
     pass
 
-# Genus species
+# Species
 # Horse
 class Caballus(Equus):
     def shape(self):
@@ -68,11 +70,15 @@ class Caballus(Equus):
     def say(self):
         print("Neigh!")
 
-    def temperament(self):  # redefining down temperament here, after multiple layers of inheritance
-        print("I'm gentle if domesticated!")
+    # Redefining temperament() inherited from Abstract Base Class.
+    def temperament(self):
+        print("I'm gentle!")
 
 # Donkey
 class Africanus(Equus):
+    def __init__(self):
+        self.hasBigEars = True
+
     def shape(self):
         print("I'm pretty small!")
 
@@ -93,4 +99,31 @@ class Mule(Caballus, Africanus):
     def temperament(self):
         print("I'm intelligent, sociable, and gentle!")
 
+# Throws an error since it cannot create a consistent method resolution.
+# class MuleClone(Animalia, Mammalia, Perissodactyla, Equidae, Equus, Caballus, Africanus):
+#     pass
+
+# This won't throw an error, since the listed parent classes are written in order.
+class MuleClone(Africanus, Caballus, Equus, Equidae, Perissodactyla, Mammalia, Animalia):
+    def talk(self):
+        print("I'm the mule clone!")
+
+# All abstract method has been overridden.
+# No errors when instantiated.
+MuleObj = Mule()
+
+# Calling method inherited from Donkey.
+print(MuleObj.hasBigEars)
+
+# Calling method from Mammalia.
+MuleObj.giveBirth()
+MuleObj.feedChild()
+
+# Mule clone instantiation and calling its methods.
+print("Mule clone is giving birth!")
+MCloneObj = MuleClone()
+MCloneObj.giveBirth()
+MCloneObj.feedChild()
+
+# Calling the MRO.
 print(Mule.mro())
