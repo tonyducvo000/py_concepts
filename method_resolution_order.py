@@ -104,7 +104,8 @@ class Mule(Caballus, Africanus):
 #     pass
 
 # This won't throw an error, since the listed parent classes are written in order.
-class MuleClone(Africanus, Caballus, Equus, Equidae, Perissodactyla, Mammalia, Animalia):
+class MuleClone(Africanus, Caballus, Equus, Equidae,
+                Perissodactyla, Mammalia, Animalia):
     def talk(self):
         print("I'm the mule clone!")
 
