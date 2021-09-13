@@ -25,8 +25,8 @@
 ##################################################################################################################################################################
 
 # Class to demonstrate problem of:
-# 1. instantiating base class, and
-# 2. error when calling an abstract method (i.e., Concrete subclass did NOT override abstract base method).
+# 1. Instantiating base class, and
+# 2. Error when calling an abstract method (i.e., Concrete subclass did NOT override abstract base method).
 class Base:
     def foo(self):
         raise NotImplementedError()
@@ -52,9 +52,9 @@ conObj = Concrete()
 print(isinstance(conObj, Concrete))  # Prints True
 
 # Now the error is thrown ONLY when the bar() method is called.
-# The error should be early as possible (i.e., Error should be thrown at line 49, when conObj is instantiated)
+# The error should be early as possible (i.e., Error should be thrown at line 49, when conObj is instantiated).
 # If user did not call the bar() method, the program would run normally.
-# This is a problem if user calls the method.
+# This becomes a problem when the user calls the method.
 conObj.bar()
 
 # In abstract_base_class_decorator.py, solution to problem 1 and 2 will be provided.
