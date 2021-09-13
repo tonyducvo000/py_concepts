@@ -121,9 +121,13 @@ class MuleClone(Caballus, Africanus, Equus, Equidae,
 MuleObj = Mule()
 
 # Calling method inherited from Donkey.
+# Python searches for the method in this order: Mule -> Caballus -> Africanus,
+# and then resolves the method.
 print(MuleObj.hasBigEars)
 
 # Calling method from Mammalia.
+# Python searches for the method by Mule -> Caballus -> Africanus -> Equus -> Equidae -> Perissodactyla -> Mammalia order
+# and then resolves the method.
 MuleObj.giveBirth()
 MuleObj.feedChild()
 
